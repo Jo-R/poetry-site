@@ -1,24 +1,12 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <style>
-      html,
-      body {
-        font-family: system-ui;
-        margin: 0;
-      }
-      body {
-        padding: 2rem;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>Hi poetry thing</h1>
-    </main>
-  </body>
-</html>
+---
+import PoemCard from "../components/PoemCard.astro";
+import MySiteLayout from "../layouts/MainLayout.astro";
+---
+
+<MySiteLayout>
+  <div>
+    <h1>Hi poetry thing</h1>
+    <p>So I guess here are some poems and things</p>
+  </div>
+  <PoemCard />
+</MySiteLayout>

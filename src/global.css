@@ -1,0 +1,22 @@
+:root {
+  --green-text: rgb(59, 176, 117);
+}
+
+html,
+body {
+  font-family: system-ui;
+  margin: 0;
+}
+body {
+  padding: 2rem;
+  background-color: rgb(29, 30, 30);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: var(--green-text);
+}
