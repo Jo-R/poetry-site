@@ -1,17 +1,21 @@
 ---
-import PoemCard from "../components/PoemCard.astro";
+import RandomStanza from "../components/RandomStanza.astro";
 import MySiteLayout from "../layouts/MainLayout.astro";
 ---
 
 <MySiteLayout>
   <div>
-    <h1>Hi poetry thing</h1>
-    <p class="intro-text">So I guess here are some poems and things</p>
+    <h1>Jo Rigg</h1>
+    <p class="intro-text">Code | Words | Sound</p>
   </div>
   <div class="poem-wrapper">
-    <PoemCard />
-    <PoemCard />
-    <PoemCard />
+    <RandomStanza />
+    <RandomStanza />
+    <RandomStanza />
+    <p class="explanation">
+      A series of lines culled from my recent notebooks. Selected at random when
+      the page loads.
+    </p>
   </div>
 </MySiteLayout>
 
@@ -22,11 +26,14 @@ import MySiteLayout from "../layouts/MainLayout.astro";
     gap: 0.5rem;
     width: max-content;
   }
+
+  .explanation {
+    font-size: 10px;
+  }
 </style>
 
 <script>
   import { gsap } from "gsap";
-  // console.log("using GSAP: ", gsap.version);
   gsap.from(".box", {
     x: 200,
     duration: 2,
@@ -34,6 +41,6 @@ import MySiteLayout from "../layouts/MainLayout.astro";
     delay: 3,
     opacity: 0,
   });
-  gsap.to("h1", { rotate: 360, duration: 2 });
+  gsap.from(".explanation", { x: 200, delay: 7, opacity: 0 });
   gsap.from(".intro-text", { x: -500, delay: 2 });
 </script>

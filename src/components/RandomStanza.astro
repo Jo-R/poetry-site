@@ -1,0 +1,19 @@
+---
+import { sentences } from "../data/sentences";
+
+const shuffled = sentences.sort(() => 0.5 - Math.random());
+---
+
+<div class="box">
+  <p>
+    {shuffled[Math.floor(Math.random() * shuffled.length)]}
+    <br />
+    {shuffled[Math.floor(Math.random() * shuffled.length)]}
+    <br />
+    {shuffled[Math.floor(Math.random() * shuffled.length)]}
+    <br />
+    {shuffled[Math.floor(Math.random() * shuffled.length)]}
+    <br />
+    {shuffled[Math.floor(Math.random() * shuffled.length)]}
+  </p>
+</div>
